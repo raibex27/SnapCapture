@@ -1,0 +1,7 @@
+{
+  "name": "SnapCapture – Smart Text Recognition v1",
+  "description": "An intelligent web app that instantly captures and extracts text from real-world images using your device’s camera. It turns your camera into a fast, accurate text scanner powered by the Gemini API.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

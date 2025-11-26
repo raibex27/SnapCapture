@@ -1,0 +1,46 @@
+{
+  "short_name": "SnapCapture",
+  "name": "SnapCapture – Smart Text Recognition",
+  "description": "An intelligent web app that instantly captures and extracts text from real-world images using your device’s camera. It turns your camera into a fast, accurate text scanner powered by the Gemini API.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile-capture.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Instantly scan text using your device's camera."
+    },
+    {
+      "src": "/screenshot-mobile-result.png",
+      "sizes": "540x1170",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "View, edit, and interact with the extracted text."
+    },
+    {
+      "src": "/screenshot-desktop-result.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Seamless experience on desktop and larger screens."
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1F2937",
+  "background_color": "#0D1117"
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://snapcapture.netlify.app/sitemap.xml

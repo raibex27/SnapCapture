@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1F2937" />
+    
+    <!-- Primary SEO -->
+    <title>SnapCapture - Free AI Image to Text Converter & OCR Scanner</title>
+    <meta name="description" content="Instantly extract text from images using Google Gemini AI. Free online OCR tool, photo to text converter, and code scanner. Works offline as a PWA on Android & iOS." />
+    <meta name="keywords" content="AI OCR, Image to Text, Free Text Scanner, Gemini AI OCR, Extract Text from Image, Photo to Text, Online OCR, React PWA, Mobile Scanner, PDF Export" />
+    <meta name="author" content="SnapCapture" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://snapcapture.netlify.app/" />
+    <meta property="og:title" content="SnapCapture - AI Text Recognition Tool" />
+    <meta property="og:description" content="Convert images to text instantly with AI. Capture, crop, and export to PDF. Free and works offline." />
+    <meta property="og:image" content="/screenshot-mobile-result.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://snapcapture.netlify.app/" />
+    <meta property="twitter:title" content="SnapCapture - AI Text Recognition Tool" />
+    <meta property="twitter:description" content="Convert images to text instantly with AI. Capture, crop, and export to PDF." />
+    <meta property="twitter:image" content="/screenshot-mobile-result.png" />
+
+    <!-- JSON-LD Structured Data for AI & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SnapCapture",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android, iOS, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "An intelligent web app that instantly captures and extracts text from real-world images using Google Gemini API.",
+      "featureList": "AI Text Extraction, Image Cropping, PDF Export, Offline Support, Phone Number Detection",
+      "softwareRequirements": "Modern Web Browser",
+      "author": {
+        "@type": "Organization",
+        "name": "SnapCapture Team"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" integrity="sha512-hvNR0F/e2J7zPPfX0jJe3p6uVpZ/ZJf5s7G6GZ1i8I9G8/23K/f8/27/2/1/2/c/r/o/p/p/e/r/./m/i/n/./c/s/s" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        background-color: #0D1117;
+        background-image: radial-gradient(circle at top, rgba(79, 70, 229, 0.15) 0%, rgba(13, 17, 23, 0) 40%);
+        -webkit-tap-highlight-color: transparent;
+      }
+      @keyframes scan-line-anim {
+        0% { top: 2rem; }
+        100% { top: calc(100% - 2rem); }
+      }
+      .animate-scan-line {
+        animation: scan-line-anim 3s ease-in-out infinite alternate;
+      }
+      /* Custom Cropper Styles for Dark Mode */
+      .cropper-modal {
+        background-color: #000;
+        opacity: 0.8;
+      }
+      .cropper-view-box {
+        outline: 2px solid #6366f1; /* Indigo-500 */
+        outline-color: rgba(99, 102, 241, 0.75);
+      }
+      .cropper-line {
+        background-color: #6366f1;
+      }
+      .cropper-point {
+        background-color: #818cf8;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "jspdf": "https://cdn.jsdelivr.net/npm/jspdf@2.5.1/+esm"
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js" integrity="sha512-9KkIqdfN7ipEW6rx6kraaq87tyTEk1J0k2hwPlZUgpefN09p0W4wu09/4n/h/r/e/l/I/e/f/./m/i/n/./j/s" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+  <body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
